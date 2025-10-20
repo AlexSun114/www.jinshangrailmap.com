@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html5,金尚市官服,JTRserver,金尚市,Jinshang,jinshangmcser">
+    <meta name="description" content="这是金尚市官方服务器网站分支">
+    <title>金尚市轨道交通服务器线路图 | JTR Sever Railway Map</title>
+    <!-- 使用Minecraft风格的图标 -->
+    <link rel="icon" type="image/x-icon" href="./mtr.png">
+    <!-- 额外添加不同尺寸的图标以适应各种设备 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./mtr.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./mtr.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./mtr.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        :root {
+            /* 定义颜色变量 */
+            --primary-color: #4CAF50;
+            --primary-dark-color: #45a049;
+            --secondary-color: #2196F3;
+            --secondary-dark-color: #0b7dda;
+            --danger-color: #f44336;
+            --danger-dark-color: #d32f2f;
+            --warning-color: #ff5722;
+            --neutral-color: #333;
+            --light-color: #f5f5f5;
+            --white-color: #fff;
+            --gray-color: #888;
+            --light-gray-color: #f2f2f2;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--light-color);
+            color: var(--neutral-color);
+            position: relative;
+        }
+        #header {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--neutral-color);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: var(--white-color);
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .nav a:hover {
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+        .section {
+            background-color: var(--white-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: var(--primary-dark-color);
+        }
+        .admin-btn {
+            background-color: var(--danger-color);
+        }
+        .admin-btn:hover {
+            background-color: var(--danger-dark-color);
+        }
+
+        /* 公告样式 */
+        .announcement {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .announcement-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .announcement-date {
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .announcement-author {
+            font-style: italic;
+            margin-top: 10px;
+            text-align: right;
+        }
+        .announcement-delete {
+            color: var(--danger-color);
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .announcement-delete:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>金尚市轨道交通线路图 | JTR Sever Railway Map</h1>
+        <div id="clock"></div>
+    </div>
+
+    <div class="nav">
+        <a href="#bigmap">线路大图 | Big Map</a>
+        <a href="#singleline">单独线路 | Single Line Map</a>
+        <a href="#back">返回官网 | Back To Official Website</a>
+        <a href="https://discord.gg/kVtBeyw5fm" target="_blank">加入Discord | Join Discord</a>
+    </div>
+
+    <div id="bigmap" class="section">
+        <h2>线路大图 | Big Map</h2>
+        <img src="static/png/bigmap.png" alt="线路大图" width="600" height="2009">
+
+    <div id="singleline" class="section">
+        <h2>单独线路 | Single Line Map</h2>
+        <h2>1号线 | Line 1</h2>
+        <img src="static/png/Line 1.png" alt="线路大图" width="3000" height="450">
+        <h2>2号线 | Line 2</h2>
+        <img src="static/png/Line 2.png" alt="线路大图" width="1800" height="450">
+        <h2>火车站快线 | Railway Express Line</h2>
+        <img src="static/png/Railway Express.png" alt="线路大图" width="1800" height="450">
+        <h2>公交1路 | Bus Line 1</h2>
+        <img src="static/png/Bus Line 1.png" alt="线路大图" width="1800" height="450">
+        <h2>高速铁路 | High-Speed Rail</h2>
+        <img src="static/png/High-Speed.png" alt="线路大图" width="1800" height="450">
+
+
+    <div id="back" class="section">
+        <h2>返回官网 | Back To Official Wabsite</h2>
+        <a href="https://alexsun114.github.io/www.jinshangmcser.com/" class="btn">返回 | Back</a>
+    </div>
+    <div id="admin-area" class="section" style="display: none;">
+        <h2>管理员面板</h2>
+        <div id="admin-content">
+            <h3>管理员功能</h3>
+            <button id="view-users-btn" class="btn admin-btn">查看用户列表</button>
+            <button id="manage-server-btn" class="btn admin-btn">服务器管理</button>
+            <button id="send-announcement-btn" class="btn admin-btn">发送公告</button>
+            <button id="add-points-btn" class="btn admin-btn">给用户添加积分</button>
+            
+            <div id="users-table-container" style="display: none; margin-top: 20px;">
+                <table id="users-table">
+                    <thead>
+                        <tr>
+                            <th>头像</th>
+                            <th>用户名</th>
+                            <th>邮箱</th>
+                            <th>邮箱状态</th>
+                            <th>积分</th>
+                            <th>用户类型</th>
+                            <th>注册日期</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-table-body">
+                        <!-- 用户数据将通过JavaScript动态加载 -->
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+    <div class="section">
+        <a href="#" class="btn">回到顶部 | Back To Top</a>
+    </div>
+            <!-- 页脚 -->
+    <footer class="bg-mtr-dark py-12 border-t border-mtr-orange/30">
+            <div class="mt-12 pt-6 border-t border-mtr-orange/20 text-center text-sm text-gray-500">
+                <p>2025 金尚市服务器 - 保留所有权利</p>
+                <p class="mt-1">2025 JTR Server - All Rights Reserved</p>
+            </div>
+    </footer>
+            <form id="send-announcement-form">
+            </form>
+            <p id="announcement-error" style="color: red;"></p>
+    <script>
+        // 模拟数据库 - 添加avatar字段和emailVerified字段
+        let users = [
+            { id: 1, username: 'admin', email: 'admin@shanwogou.com', password: 'admin123', 
+              isAdmin: true, points: 1000, lastCheckin: null, joinDate: '2023-01-01',
+              avatar: 'https://picsum.photos/id/169/200/200', emailVerified: true, 
+              verificationToken: 'admin1234567890', customColor: null },
+            { id: 2, username: 'testuser', email: 'user@test.com', password: 'test123', 
+              isAdmin: false, points: 200, lastCheckin: null, joinDate: '2023-06-01',
+              avatar: 'https://picsum.photos/id/175/200/200', emailVerified: false,
+              verificationToken: 'test1234567890', customColor: null }
+        ];
+
+        // 公告数据
+        let announcements = [
+            { 
+                id: 1, 
+                title: "网站公告", 
+                content: "我们的官方网站已经正式发布，欢迎前来访问！", 
+                author: "JinRui_MaoMao", 
+                date: "2025-10-20" 
+            },
+            { 
+                id: 1, 
+                title: "网站公告", 
+                content: "我们的官方网站已经编辑完成，即将正式发布！", 
+                author: "JinRui_MaoMao", 
+                date: "2025-10-19" 
+            },
+            { 
+                id: 2, 
+                title: "NaN", 
+                content: "NaN", 
+                author: "NaN", 
+                date: "NaN" 
+            }
+        // 当前登录用户
+        let currentUser = null;
+
+        // DOM元素
+        const clockElement = document.getElementById('clock');
+        const loginBtn = document.getElementById('login-btn');
+        const registerBtn = document.getElementById('register-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const checkinBtn = document.getElementById('checkin-btn');
+        const loginModal = document.getElementById('login-modal');
+        const registerModal = document.getElementById('register-modal');
+        const avatarModal = document.getElementById('avatar-modal');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const loginError = document.getElementById('login-error');
+        const registerError = document.getElementById('register-error');
+        const userPanelButton = document.getElementById('user-panel-button');
+        const userPanel = document.getElementById('user-panel');
+        const closeUserPanel = document.getElementById('close-user-panel');
+        const loginRegisterContainer = document.getElementById('login-register-container');
+        const panelUsername = document.getElementById('panel-username');
+        const panelEmail = document.getElementById('panel-email');
+        const panelBadges = document.getElementById('panel-badges');
+        const panelPoints = document.getElementById('panel-points');
+        const userAvatarImg = document.getElementById('user-avatar-img');
+        const panelAvatarImg = document.getElementById('panel-avatar-img');
+        const adminArea = document.getElementById('admin-area');
+        const viewUsersBtn = document.getElementById('view-users-btn');
+        const usersTableContainer = document.getElementById('users-table-container');
+        const usersTableBody = document.getElementById('users-table-body');
+        const addPointsBtn = document.getElementById('add-points-btn');
+        const addPointsContainer = document.getElementById('add-points-container');
+        const pointsUserSelect = document.getElementById('points-user-select');
+        const pointsAmount = document.getElementById('points-amount');
+        const confirmAddPoints = document.getElementById('confirm-add-points');
+        const addPointsMessage = document.getElementById('add-points-message');
+        const avatarPreview = document.getElementById('avatar-preview');
+        const avatarSelector = document.getElementById('avatar-selector');
+        const avatarUpload = document.getElementById('avatar-upload');
+        const avatarUploadMessage = document.getElementById('avatar-upload-message');
+        const saveAvatarBtn = document.getElementById('save-avatar-btn');
+        const avatarBtn = document.getElementById('avatar-btn');
+        const rememberMeCheckbox = document.getElementById('remember-me');
+        const announcementsContainer = document.getElementById('announcements-container');
+        const sendAnnouncementBtn = document.getElementById('send-announcement-btn');
+        const sendAnnouncementModal = document.getElementById('send-announcement-modal');
+        const sendAnnouncementForm = document.getElementById('send-announcement-form');
+        const announcementTitle = document.getElementById('announcement-title');
+        const announcementContent = document.getElementById('announcement-content');
+        const announcementError = document.getElementById('announcement-error');
+        
+        // 修改用户名相关元素
+        const changeUsernameBtn = document.getElementById('change-username-btn');
+        const changeUsernameModal = document.getElementById('change-username-modal');
+        const changeUsernameForm = document.getElementById('change-username-form');
+        const currentPasswordInput = document.getElementById('current-password');
+        const newUsernameInput = document.getElementById('new-username');
+        const usernameError = document.getElementById('username-error');
+        
+        // 邮箱验证相关元素
+        const emailVerificationStatus = document.getElementById('email-verification-status');
+        const emailVerificationModal = document.getElementById('email-verification-modal');
+        const verifyEmailDisplay = document.getElementById('verify-email-display');
+        const resendVerificationEmailBtn = document.getElementById('resend-verification-email');
+        const verificationStatusElement = document.getElementById('verification-status');
+        
+        // 颜色选择器相关元素
+        const colorOptions = document.querySelectorAll('.color-option');
+        const customColorPicker = document.getElementById('custom-color-picker');
+        const colorResetBtn = document.getElementById('color-reset-btn');
+
+        // 时钟功能
+        function updateClock() {
+            const now = new Date();
+            clockElement.textContent = now.toLocaleString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
+
+
+
